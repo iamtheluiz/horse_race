@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Horse Race</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	
+	<!-- Game -->
+	<div id="game">
+		
+		<!-- Tela de Início -->
+		<div id="start_screen">
+			<div class="titulo">
+				<h2>Horse Race!</h2>
+			</div>
+			<div class="btn">
+				<a href="#!" id="start" onclick="start_game();">Começar!</a>
+			</div>
+		</div>
+		<!-- Fim da Tela de Início -->
+
+		<!-- Home Screen -->
+		<div id="home_screen" style="display: none;">
+			<!-- Topo do Game -->
+			<div class="topo">
+				<div class="direita">
+					<span id="balance">R$ 100</span>
+				</div>
+			</div>
+			<div class="corpo">
+				<div class="btn">
+					<a href="#!" id="start" onclick="aposta();">Apostar!</a>
+				</div>
+			</div>
+			<!-- Fim do Topo do Game -->
+		</div>
+		<!-- Fim do Home Screen -->
+
+		<!-- Tela de Aposta -->
+		<div id="aposta_screen" style="display: none;">
+			<!-- Topo do Game -->
+			<div class="topo">
+				<div class="direita">
+					<span id="balance_aposta">R$ 100</span>
+				</div>
+			</div>
+			<div class="corpo">
+				<!-- Cavalos que vão competir -->
+				<div class="horse" id="h1">
+					<span>Cav1</span>
+					<div class="btn_bot">
+						<a href="#!" onclick="selecionar_cav(1)">Apostar!</a>
+					</div>
+				</div>
+				<div class="horse" id="h2">
+					<span>Cav2</span>
+					<div class="btn_bot">
+						<a href="#!" onclick="selecionar_cav(2)">Apostar!</a>
+					</div>
+				</div>
+				<div class="horse" id="h3">
+					<span>Cav3</span>
+					<div class="btn_bot">
+						<a href="#!" onclick="selecionar_cav(3)">Apostar!</a>
+					</div>
+				</div>
+				<div class="horse" id="h4">
+					<span>Cav4</span>
+					<div class="btn_bot">
+						<a href="#!" onclick="selecionar_cav(4)">Apostar!</a>
+					</div>
+				</div>
+				<!-- Fim dos Cavalos que vão competir -->
+			</div>
+			<!-- Fim do Topo do Game -->
+		</div>
+		<!-- Fim da Tela de Aposta -->
+
+		<!-- Corrida de Cavalos -->
+		<div id="race_screen" style="display: none;">
+			<!-- Topo do Game -->
+			<div class="topo">
+				<span id="cavalo_aposta"></span>
+			</div>
+			<div class="corpo">
+				<br><br>
+				<div class="pista">
+					<div class="cavalo" id="c1"></div>
+					<div class="cavalo" id="c2"></div>
+					<div class="cavalo" id="c3"></div>
+					<div class="cavalo" id="c4"></div>
+				</div>
+			</div>
+			<!-- Fim do Topo do Game -->
+		</div>
+		<!-- Fim do Corrida de Cavalos -->
+
+	</div>
+	<!-- Fim do Game -->
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="js/game.js"></script>
+	<!-- Fim dos Scripts -->
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+html{
+	font-family: Arial;
+}
+#game{
+	width: 600px;
+	height: 400px;
+	background-color: black;
+	border:4px solid black;
+}
+.direita{
+	float:right;
+}
+
+/*Start Screen Style*/
+#start_screen{
+	padding-top:120px;
+}
+#start_screen .btn{
+	text-align: center;
+}
+#start_screen .btn a{
+	color:white;
+}
+#start_screen .titulo{
+	text-align: center;
+	color:white;
+}
+
+/*Home Screen Style*/
+#home_screen .topo{
+	height: 30px;
+	padding:2px;
+	line-height: 34px;
+	color:white;
+}
+#home_screen .corpo{
+	height: 366px;
+	background-color: white;
+	width:100%;
+}
+
+/*Aposta Screen Style*/
+#aposta_screen .topo{
+	height: 30px;
+	padding:2px;
+	line-height: 34px;
+	color:white;
+}
+#aposta_screen .corpo{
+	height: 366px;
+	background-color: white;
+	width:100%;
+}
+#aposta_screen .corpo .horse{
+	width: 20%;
+	padding:2.5%;
+	float:left;
+	text-align: center;
+}
+
+/*Corrida Screen Style*/
+#race_screen .topo{
+	height: 30px;
+	padding:2px;
+	line-height: 34px;
+	color:white;
+}
+#race_screen .corpo{
+	height: 366px;
+	background-color: white;
+	width:100%;
+}
+.pista{
+	width: 95%;
+	margin-left:2.5%;
+	background-color: blue;
+	height: 20px;
+}
+.pista .cavalo{
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	margin-bottom:10px;
+	/*margin-left:calc(100% - 20px);*/
+}
