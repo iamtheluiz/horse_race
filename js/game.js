@@ -95,6 +95,7 @@ function comecar_corrida(){
 	//Termina a função após 10 segundos
 	setTimeout(function(){
 		clearInterval(intervalo);
+		terminar_corrida();
 	},10000);
 }
 
@@ -118,6 +119,20 @@ function atualizar_frames_cavalos(){
 		div.setAttribute("total",(parseInt(total) + parseInt(passo)));
 	}
 
+}
+
+function terminar_corrida(){
+	//Deixa a tela de corrida invisivel
+	var race_screen = document.getElementById("race_screen");
+	race_screen.style = "display:none;";
+
+	//Coloca a tela do vencedor
+	var winner = document.getElementById("winner");
+	winner.style = "";
+
+	//Exibe quem foi o ganhador
+	var cavalo_ganhador = document.querySelector(".cavalo_ganhador");
+	cavalo_ganhador.innerHTML = "O ganhador é "+document.getElementById(ganhador).innerHTML;
 }
 
 function start_game(){

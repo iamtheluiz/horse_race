@@ -74,12 +74,24 @@ html{
 	width: 95%;
 	margin-left:2.5%;
 	background-color: blue;
-	height: 20px;
+	height: auto;
+	padding-top:10px;
+	padding-bottom:3px;
 }
 .pista .cavalo{
 	width: 20px;
 	height: 20px;
 	background-color: black;
 	margin-bottom:10px;
+	color:white;
+	text-align: center;
+	line-height: 20px;
 	/*margin-left:calc(100% - 20px);*/
+}
+.winner a{
+	color:white !important;
+}
+.cavalo_ganhador{
+	color:white;
+	text-align: center;
 }
