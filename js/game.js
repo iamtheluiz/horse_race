@@ -9,12 +9,9 @@ function setup(){
 
 }
 
-function atualizar_balanco(type){
-	if(type == 'home'){
-		document.getElementById("balance").innerHTML = "R$ "+parseFloat(money);
-	}else if(type == 'aposta'){
-		document.getElementById("balance_aposta").innerHTML = "R$ "+parseFloat(money);
-	}
+function atualizar_balanco(){
+	document.getElementById("balance").innerHTML = "R$ "+parseFloat(money);
+	document.getElementById("balance_aposta").innerHTML = "R$ "+parseFloat(money);
 }
 
 function aposta(){
@@ -25,7 +22,7 @@ function aposta(){
 	//Coloca a primeira tela do jogo
 	var aposta_screen = document.getElementById("aposta_screen");
 	aposta_screen.style = "";
-	atualizar_balanco('aposta');
+	atualizar_balanco();
 }
 
 function selecionar_cav(cavalo){
@@ -43,6 +40,12 @@ var quarto = 0;
 var intervalo = '';
 
 function comecar_corrida(){
+	ganhador = 0;
+	segundo = 0;
+	terceiro = 0;
+	quarto = 0;
+	intervalo = '';
+
 	//Deixa a tela de seleção invisivel
 	var aposta_screen = document.getElementById("aposta_screen");
 	aposta_screen.style = "display:none;";
@@ -78,6 +81,9 @@ function comecar_corrida(){
 			quarto = c;
 		}
 	}
+
+	//Coloca os elementos no corpo
+	document.querySelector(".pista").innerHTML = '<div class="cavalo" id="c1">1</div><div class="cavalo" id="c2">2</div><div class="cavalo" id="c3">3</div><div class="cavalo" id="c4">4</div>';
 
 	//Define o passo de cada cavalo
 	document.getElementById(ganhador).setAttribute("passo",5);
@@ -122,6 +128,14 @@ function atualizar_frames_cavalos(){
 }
 
 function terminar_corrida(){
+	//Verifica se o jogador perdeu ou ganhou
+	if(cavalo_aposta == parseInt(ganhador.split('c')[1])){
+		money += 2*valor_aposta;
+	}else{
+		money -= valor_aposta;
+	}
+	atualizar_balanco();
+
 	//Deixa a tela de corrida invisivel
 	var race_screen = document.getElementById("race_screen");
 	race_screen.style = "display:none;";
@@ -133,6 +147,16 @@ function terminar_corrida(){
 	//Exibe quem foi o ganhador
 	var cavalo_ganhador = document.querySelector(".cavalo_ganhador");
 	cavalo_ganhador.innerHTML = "O ganhador é "+document.getElementById(ganhador).innerHTML;
+}
+
+function voltar_home(){
+	//Deixa a tela do vencedor invisivel
+	var winner_screen = document.getElementById("winner");
+	winner_screen.style = "display:none;";
+
+	//Deixa a tela de home visivel
+	var home_screen = document.getElementById("home_screen");
+	home_screen.style = "";
 }
 
 function start_game(){
