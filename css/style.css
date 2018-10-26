@@ -57,7 +57,10 @@ html{
 	float:left;
 	text-align: center;
 }
-
+#aposta_screen .corpo img{
+	width: 100%;
+	height: auto;
+}
 /*Corrida Screen Style*/
 #race_screen .topo{
 	height: 30px;
@@ -79,14 +82,27 @@ html{
 	padding-bottom:3px;
 }
 .pista .cavalo{
-	width: 20px;
-	height: 20px;
-	background-color: black;
+	width: 30px;
+	height: 30px;
 	margin-bottom:10px;
 	color:white;
 	text-align: center;
 	line-height: 20px;
 	/*margin-left:calc(100% - 20px);*/
+	background: url("horse.png");
+	background-size: cover;
+}
+.cavalo-verde{
+	filter: hue-rotate(70deg);
+}
+.cavalo-azul{
+	filter: hue-rotate(180deg);
+}
+.cavalo-pink{
+	filter: hue-rotate(300deg);
+}
+.cavalo-laranja{
+	filter: hue-rotate(350deg);
 }
 .winner a{
 	color:white !important;
@@ -95,3 +111,4 @@ html{
 	color:white;
 	text-align: center;
 }
+

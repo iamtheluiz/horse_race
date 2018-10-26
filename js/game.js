@@ -83,7 +83,7 @@ function comecar_corrida(){
 	}
 
 	//Coloca os elementos no corpo
-	document.querySelector(".pista").innerHTML = '<div class="cavalo" id="c1">1</div><div class="cavalo" id="c2">2</div><div class="cavalo" id="c3">3</div><div class="cavalo" id="c4">4</div>';
+	document.querySelector(".pista").innerHTML = '<div class="cavalo cavalo-verde" id="c1">1</div><div class="cavalo cavalo-azul" id="c2">2</div><div class="cavalo cavalo-pink" id="c3">3</div><div class="cavalo cavalo-laranja" id="c4">4</div>';
 
 	//Define o passo de cada cavalo
 	document.getElementById(ganhador).setAttribute("passo",5);
