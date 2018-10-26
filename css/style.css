@@ -79,6 +79,9 @@ html{
 	float:left;
 	text-align: center;
 }
+#aposta_screen .corpo .horse:hover{
+	cursor: pointer;
+}
 #aposta_screen .corpo img{
 	width: 100%;
 	height: auto;
