@@ -121,7 +121,7 @@ function atualizar_frames_cavalos(){
 		var passo = div.getAttribute("passo");
 		var total = div.getAttribute("total");
 		div.style = "margin-left: calc("+(parseInt(total) + parseInt(passo))+"% - 20px)";
-		console.log((parseInt(total) + parseInt(passo)));
+		//console.log((parseInt(total) + parseInt(passo)));
 		div.setAttribute("total",(parseInt(total) + parseInt(passo)));
 	}
 
@@ -146,7 +146,23 @@ function terminar_corrida(){
 
 	//Exibe quem foi o ganhador
 	var cavalo_ganhador = document.querySelector(".cavalo_ganhador");
-	cavalo_ganhador.innerHTML = "O ganhador é "+document.getElementById(ganhador).innerHTML;
+	cavalo_ganhador.innerHTML = "O ganhador é o cavalo "+document.getElementById(ganhador).innerHTML;
+
+	//Mosta o cavalo vencedor
+	var cav_win = document.querySelector(".cavalo_ganhador");
+	var class_cav = '';
+	var winner = document.getElementById(ganhador).innerHTML;
+	if(winner == 1){
+		class_cav = "cavalo-verde";
+	}else if(winner == 2){
+		class_cav = "cavalo-azul";
+	}else if(winner == 3){
+		class_cav = "cavalo-pink";
+	}else if(winner == 4){
+		class_cav = "cavalo-laranja";
+	}
+	cav_win.innerHTML += '<div class="horse" id="h3"><img src="css/horse.png" class="'+class_cav+'"><div class="btn_bot"></div></div>';
+
 }
 
 function voltar_home(){
